@@ -290,6 +290,7 @@
                 </ul>
               </li>
             </ul>
+
             
             <p class="navbar-text" <?php if (!$isView) { echo ' style="display:none" '; }?>>At <?php echo gmdate("H:i", $dateReported);?> EVE Time</p>            
                    
@@ -377,13 +378,14 @@
                </table> 
             </div>
         </div>
+		<p>Share Link - <?php echo curPageURL(); ?>
       </div>
       
      <!--  END: Display DScan from DB -->
       
       <hr>
        <footer>
-        <p>&copy; 2012 <a onclick="CCPEVE.showInfo(1377,346038954)" href="#">HydroPod</a>, <a onclick="CCPEVE.showInfo(2,98079411)" href="#">Micro Services [MSC..]</a>. <br/>Although this is a free app, you're welcome to send ISK to the corp if you'd like to.</p>
+        <p>&copy; 2015  Mr Twinkie</p>
       </footer>
 
     </div> <!-- /container -->
