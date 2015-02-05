@@ -51,8 +51,6 @@
   </head> 
   
   <?php
-		$requestHeaders = apache_request_headers();
-
         define("IN_DSCAN", true);  
 
         // DB settings
