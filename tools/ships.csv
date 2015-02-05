@@ -46,6 +46,7 @@ Claw,Interceptor,Tackle
 Claymore,Cmd. Ship,Booster
 Coercer,Destroyer,Tackle
 Condor,Frigate,Tackle
+Confessor,Destroyer,Support
 Corax,Destroyer,Support
 Cormorant,Destroyer,Support
 Covetor,Mining Barge,Miner
@@ -80,6 +81,7 @@ Fenrir,Freighter,Freighter
 Ferox,Battlecruiser,DPS
 Flycatcher,Interdictor,Bubbler
 Freki,Frigate,Tackle
+Garmur,Frigate,Tackle
 Gila,Cruiser,DPS
 Golem,Marauder,DPS
 Griffin,Frigate,EWAR
@@ -142,6 +144,7 @@ Naga,Battlecruiser,DPS
 Naglfar,Dreadnought,Capital
 Navitas,Frigate,Tackle
 Nemesis,S. Bomber,Bomber
+Nestor,Battleship,Support
 Nidhoggur,Carrier,Capital
 Nighthawk,Cmd. Ship,DPS
 Nightmare,Battleship,DPS
@@ -155,6 +158,7 @@ Oneiros,Logistics,Logistics
 Onyx,Hictor,Bubbler
 Oracle,Battlecruiser,DPS
 Orca,Ind. Cmd.,Ind. Cmd.
+Orthrus,Cruiser,DPS
 Osprey,Cruiser,T1 Logi
 Osprey Navy Issue,Cruiser,Cruiser
 Paladin,Marauder,DPS
