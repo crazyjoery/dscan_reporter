@@ -51,7 +51,8 @@
   </head> 
   
   <?php
-  
+		$requestHeaders = apache_request_headers();
+
         define("IN_DSCAN", true);  
 
         // DB settings
@@ -75,7 +76,7 @@
         $isView = false;    
         
         // Are we trusted by the IGB?        
-        if (array_key_exists('HTTP_EVE_TRUSTED', $_SERVER))
+       if (array_key_exists('HTTP_EVE_TRUSTED', $_SERVER))
         {
             if ($_SERVER['HTTP_EVE_TRUSTED'] != 'Yes')
             {
@@ -84,9 +85,9 @@
             }        
         }
         else
-        {
+      {
             // No, tell the user
-            die("Website is not trusted by the IGB. Grant trust and refresh the page.");
+           die("Website is not trusted by the IGB. Grant trust and refresh the page.");
         }     
         
         // Connect to the database
