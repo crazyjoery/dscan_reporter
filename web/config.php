@@ -25,6 +25,6 @@ $CONFIG = array();
 $CONFIG['db_host'] = 'localhost';
 $CONFIG['db_name'] = 'dscan';    
 $CONFIG['db_user'] = 'root';
-$CONFIG['db_passwd'] = '';
+$CONFIG['db_passwd'] = '8sardinr';
 
 ?>

@@ -73,7 +73,9 @@
         // Default mode is to view the submit form
         $isView = false;    
         
-        // Are we trusted by the IGB?        
+        // Are we trusted by the IGB? 
+		$requestHeaders = apache_request_headers();
+		echo $requestHeaders['EVE_TRUSTED'];
        if (array_key_exists('HTTP_EVE_TRUSTED', $_SERVER))
         {
             if ($_SERVER['HTTP_EVE_TRUSTED'] != 'Yes')
