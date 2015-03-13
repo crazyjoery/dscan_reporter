@@ -250,7 +250,7 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="<?php if ($isView) { echo $_SERVER['PHP_SELF']; } else { echo '#'; } ?>">
-          <?php if ($isView) { echo 'Click for a new DScan'; } else { echo 'Submit a DScan'; } ?>
+          <?php if ($isView) { echo 'Click for a new DScan'; } else { echo 'MAMBA D-Scan Tool'; } ?>
           </a> 
           
           <!-- BEGIN: Hide if not in display mode -->  
@@ -258,7 +258,7 @@
             <ul class="nav" <?php if (!$isView) { echo ' style="display:none" '; }?>>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Reported by <?php echo $igb_data->charName; ?>
+                  Reported by : <?php echo $igb_data->charName; ?>
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -273,7 +273,7 @@
             <ul class="nav" <?php if (!$isView) { echo ' style="display:none" '; }?>>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  From system <?php echo $igb_data->systemName; ?>
+                  From System : <?php echo $igb_data->systemName; ?>
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -298,6 +298,9 @@
     
     <!-- BEGIN: Submit form --> 
     <div class="row" <?php if ($isView) { echo ' style="display:none" '; }?>>
+	
+	Open Your D-Scan Window, Hit Ctrl+A To Select All, Hit Crtl+C To Copy, Paste Into The Box Below.
+	
         <div class="span12">    
           <form class="form-horizontal" method="post">
               <div class="control-group">            
@@ -371,13 +374,20 @@
                </table> 
             </div>
         </div>
+		Share Scan - <a href="#" id="link" target="_blank">Copy Me</a>
+
+<script type="text/javascript">
+window.onload = function(){
+    document.getElementById("link").href = window.location.toString();
+}
+</script>
       </div>
       
      <!--  END: Display DScan from DB -->
       
       <hr>
        <footer>
-        <p>&copy; 2012 <a onclick="CCPEVE.showInfo(1377,346038954)" href="#">HydroPod</a>, <a onclick="CCPEVE.showInfo(2,98079411)" href="#">Micro Services [MSC..]</a>. <br/>Although this is a free app, you're welcome to send ISK to the corp if you'd like to.</p>
+        <p>&copy; 2015 <a onclick="CCPEVE.showInfo(1377,759440135)" href="#">Mr Twinkie</a>, <a onclick="CCPEVE.showInfo(2,98293422)" href="#">Hostess Industries</a>. <br/>This tool is an updated version of recon-null's D-Scan tool. It was updated by Mr Twinkie for Hostess Industries. ISK Donations Accepted.</p>
       </footer>
 
     </div> <!-- /container -->
