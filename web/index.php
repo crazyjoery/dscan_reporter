@@ -1,5 +1,4 @@
 <?php
-
 # This file is part of DScan Reporter.
 #
 # DScan Reporter is free software: you can redistribute it and/or modify
@@ -14,7 +13,6 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with DScan Reporter.  If not, see <http://www.gnu.org/licenses/>.
-
 ?>
 
 <!DOCTYPE html>
@@ -51,8 +49,8 @@
   </head> 
   
   <?php
+  
         define("IN_DSCAN", true);  
-
         // DB settings
         include 'config.php';
         
@@ -73,10 +71,8 @@
         // Default mode is to view the submit form
         $isView = false;    
         
-        // Are we trusted by the IGB? 
-		$requestHeaders = apache_request_headers();
-		echo $requestHeaders['EVE_TRUSTED'];
-       if (array_key_exists('HTTP_EVE_TRUSTED', $_SERVER))
+        // Are we trusted by the IGB?        
+        if (array_key_exists('HTTP_EVE_TRUSTED', $_SERVER))
         {
             if ($_SERVER['HTTP_EVE_TRUSTED'] != 'Yes')
             {
@@ -85,9 +81,9 @@
             }        
         }
         else
-      {
+        {
             // No, tell the user
-           die("Website is not trusted by the IGB. Grant trust and refresh the page.");
+            die("Website is not trusted by the IGB. Grant trust and refresh the page.");
         }     
         
         // Connect to the database
@@ -151,7 +147,6 @@
                     }
                 }
             }
-
             // There has to be at least one ship in the dscan
             if ($ship_total <= 0)
             {
@@ -175,7 +170,6 @@
             $ship_names_json = json_encode($ship_names);
             $ship_types_json = json_encode($ship_types);
             $ship_classes_json = json_encode($ship_classes);
-
             // Create the unique ID
             $sid = uniqid("", true);
              
@@ -290,7 +284,6 @@
                 </ul>
               </li>
             </ul>
-
             
             <p class="navbar-text" <?php if (!$isView) { echo ' style="display:none" '; }?>>At <?php echo gmdate("H:i", $dateReported);?> EVE Time</p>            
                    
@@ -378,14 +371,13 @@
                </table> 
             </div>
         </div>
-		<p>Share Link - <?php echo curPageURL(); ?>
       </div>
       
      <!--  END: Display DScan from DB -->
       
       <hr>
        <footer>
-        <p>&copy; 2015  Mr Twinkie</p>
+        <p>&copy; 2012 <a onclick="CCPEVE.showInfo(1377,346038954)" href="#">HydroPod</a>, <a onclick="CCPEVE.showInfo(2,98079411)" href="#">Micro Services [MSC..]</a>. <br/>Although this is a free app, you're welcome to send ISK to the corp if you'd like to.</p>
       </footer>
 
     </div> <!-- /container -->
